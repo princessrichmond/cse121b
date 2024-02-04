@@ -1,9 +1,13 @@
 /* LESSON 3 - Programming Tasks */
 
 /* Profile Object  */
+let photoElement = document.querySelector("#photo");
 let myProfile = {
     name: "Princess Richmond",
-    photo: "images/m.jpg",
+    photo: {
+        src:"images/m.jpg",
+        alt: "My Profile Picture"
+    },
     favoriteFoods: ["Lechon", "Fried Chicken", "Steak", "Fish", "Pancit"],
     hobbies: ["Watching", "Sewing", "Hiking"],
     placedLived: [{}
@@ -38,10 +42,10 @@ myProfile.placedLived.push(
 /* DOM Manipulation - Output */
 /* Name */
 document.querySelector("#name").textContent = myProfile.name;
-/* Photo with attributes */
-imageElement.setAttribute("src", photo);
-imageElement.setAttribute("alt", `Profile Image of ${name}.`);
 
+/* Photo with attributes */
+photoElement.src = myProfile.photo.src;
+photoElement.alt = myProfile.photo.alt;
 
 /* Favorite Foods List*/
 myProfile.favoriteFoods.forEach(food => {
@@ -57,16 +61,15 @@ myProfile.hobbies.forEach(hobbies => {
     document.querySelector("#hobbies").appendChild(li);
 });
 
+
+
 /* Places Lived DataList */
-myProfile.placedLived.forEach(place => {
+myProfile.placedLived.forEach(place =>  {
     let dt = document.createElement("dt");
     dt.textContent = place;
-    // document.querySelector("#places").appendChild(dt);
-});
-myProfile.placedLived.forEach(length => {
     let dd = document.createElement("dd");
     dd.textContent = length;
     // document.querySelector("#lived").appendChild(dd);
-});
-document.querySelector("#places-lived").appendChild(dt, dd);
 
+    document.querySelector("#places-lived").appendChild(dt, dd);
+});
