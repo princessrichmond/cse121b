@@ -10,16 +10,7 @@ let myProfile = {
     },
     favoriteFoods: ["Lechon", "Fried Chicken", "Steak", "Fish", "Pancit"],
     hobbies: ["Watching", "Sewing", "Hiking"],
-    placedLived: [{}
-        // {
-        // place: "Tarlac, PH",
-        // length: "24 years",
-        // },
-        // {
-        // place: "Noblesville, IN",
-        // length: "2 years"
-        // },
-    ],
+    placedLived: []
 };
 
 
@@ -27,13 +18,13 @@ let myProfile = {
 myProfile.placedLived.push(
     {
     place: "Tarlac, PH",
-    length: "24 years",
+    length: "24 years"
     }
 );
 myProfile.placedLived.push(
     {
     place: "Noblesville, IN",
-    length: "2 years",
+    length: "2 years"
     }
 );
 
@@ -64,11 +55,13 @@ myProfile.hobbies.forEach(hobbies => {
 
 
 /* Places Lived DataList */
-myProfile.placedLived.forEach(place =>  {
+myProfile.placedLived.forEach(places_lived =>  {
     let dt = document.createElement("dt");
-    dt.textContent = place;
+    dt.textContent = places_lived.place;
     let dd = document.createElement("dd");
-    dd.textContent = length;
+    dd.textContent = places_lived.length;
 
-    document.querySelector("#places-lived").appendChild(dt, dd);
+    document.querySelector("#places-lived").appendChild(dt);
+    document.querySelector("#places-lived").appendChild(dd);
+
 });
