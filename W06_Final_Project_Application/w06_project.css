@@ -23,9 +23,9 @@ body{
 .next{
     position: absolute;
     top: 450px;
-    right: 0px;
-    width: 300px;
-    height: 50px;
+    right: 10px;
+    width: 180px;
+    height: 40px;
     transition-duration: 0.3s;
     font-size: 15px;
     border-color: #e8998d;
@@ -34,15 +34,23 @@ body{
     background-color: #e8998d;
 
 }
+h4{
+    position: absolute;
+    top: 440px;
+    left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
 #author-filter{
     position: absolute;
     top: 450px;
-    left: 0px;
-    width: 300px;
-    height: 50px;
+    left: 100px;
+    width: 180px;
+    height: 40px;
     transition-duration: 0.3s;
     font-size: 15px;
     border-color: #e8998d;
 }
+
 
 
